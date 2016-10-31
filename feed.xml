@@ -1,5 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-10-31T09:31:34+08:00</updated><id>http://localhost:4000//</id><title type="html">Tired of@</title><subtitle>很高兴和大家分享这个教程，这个教程我也是复制的 给你个链接https://hanierming.github.io/jekyll/update/2016/10/27/jekyll+github.html
-</subtitle><entry><title type="html">PDO简单操作</title><link href="http://localhost:4000/jekyll/update/2014/03/29/PDO.html" rel="alternate" type="text/html" title="PDO简单操作" /><published>2014-03-29T11:15:53+08:00</published><updated>2014-03-29T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2014/03/29/PDO</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2014/03/29/PDO.html">&lt;p&gt;详细的分析了PDO各种操作方法与技巧,需要的朋友可以参考下
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-10-31T20:54:21+08:00</updated><id>http://localhost:4000//</id><title type="html">Tired of@</title><subtitle>很高兴您能来访问我的博客，页面很随意，请大家不要笑话。我是一个phper,也喜欢简单点。
+</subtitle><entry><title type="html">初学JavaScript教程</title><link href="http://localhost:4000/jekyll/update/2014/05/03/javascript.html" rel="alternate" type="text/html" title="初学JavaScript教程" /><published>2014-05-03T09:10:16+08:00</published><updated>2014-05-03T09:10:16+08:00</updated><id>http://localhost:4000/jekyll/update/2014/05/03/javascript</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2014/05/03/javascript.html">&lt;p&gt;初次认识JavaScript
+JavaScript 是 Web 的编程语言。&lt;/p&gt;
+
+&lt;p&gt;所有现代的 HTML 页面都使用 JavaScript。&lt;/p&gt;
+
+&lt;p&gt;JavaScript 非常容易学。
+写的第一个JavaScript语言
+&amp;lt;script&amp;gt;script&amp;lt;/script&amp;gt;
+	alert(‘hello word!’);
+&amp;lt;script&amp;gt;script&amp;lt;/script&amp;gt;
+以及简单事件
+&amp;lt;button type=”button” onclick=”alert(‘欢迎!’)”&amp;gt;点我!&amp;lt;/button&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript用法
+HTML 中的脚本必须位于 &amp;lt;script&amp;gt; 与 &amp;lt;/script&amp;gt; 标签之间。脚本可被放置在 HTML 页面的 &amp;lt;body&amp;gt; 和 &amp;lt;head&amp;gt; 部分中。
+如需在 HTML 页面中插入 JavaScript，请使用  &amp;lt;script&amp;gt; 标签。
+&amp;lt;script&amp;gt; 和 &amp;lt;/script&amp;gt;  会告诉 JavaScript 在何处开始和结束。
+&amp;lt;script&amp;gt; 和 &amp;lt;/script&amp;gt;  之间的代码行包含了 JavaScript
+//简单来个示例
+&amp;lt;script&amp;gt;&lt;br /&gt;
+alert(“我的第一个 JavaScript”);&lt;br /&gt;
+&amp;lt;/script&amp;gt;
+如同我们刚看到的 弹出hello word！一样
+接下来就说下事件
+上面例子中的 JavaScript 语句，会在页面加载时执行。&lt;/p&gt;
+
+&lt;p&gt;通常，我们需要在某个事件发生时执行代码，比如当用户点击按钮时。&lt;/p&gt;
+
+&lt;p&gt;如果我们把 JavaScript 代码放入函数中，就可以在事件发生时调用该函数。
+先来个示例：
+&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html&amp;gt;&amp;lt;p&amp;gt;&amp;lt;head&amp;gt;&lt;br /&gt;&lt;span class=&quot;marked&quot;&gt;&amp;lt;script&amp;gt;&lt;br /&gt;
+function myFunction()&lt;br /&gt;
+{&lt;br /&gt;
+document.getElementById(“demo”).innerHTML=”我的第一个 JavaScript 函数”;&lt;br /&gt;
+}&lt;br /&gt;
+&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&amp;lt;/head&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;body&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;h1&amp;gt;我的 Web 页面&amp;lt;/h1&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;p id=&quot;demo&quot;&amp;gt;一个段落&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;button type=&quot;button&quot; &lt;span class=&quot;marked&quot;&gt;onclick=&quot;myFunction()&quot;&lt;/span&gt;&amp;gt;尝试一下&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;
+&amp;lt;/html&amp;gt;
+//这样当我们点击尝试一下 或触发事件 将id为demo的内容替换为 我们要输出的内容&lt;br /&gt;&lt;br /&gt;
+
+介绍到这里 如果上面直接实践的话 基本的操作就会明白点我们再介绍下他的基本语法&lt;br /&gt;
+数值类型：&lt;br /&gt;
+1.数值型：例如 3  5  1.2  3.4&lt;br /&gt;
+2.布尔：两个值真或假，如true或false &lt;br /&gt;
+3.字符串：例如: ‘I am a jelly doughnut’由一个或多个字符组成, 用单引号或双引号引起来的一系列的字符(也可以称之为一个字符串对象）&lt;br /&gt;
+4.空值：用关键字NULL表示．如果变量声明但是没有赋值就是这个类型&lt;br /&gt;
+5.未定义：用关键字undefined表示，如果变量未声明则就是未定义类型&lt;br /&gt;
+6.数组：用new Array()声明的就是数据(也可以称之为一个数组对象)&lt;br /&gt;
+7.对象：{}使用一对花括号声明的就是一个对象&lt;br /&gt;&lt;br /&gt;
+
+执行顺序：js代码自上而下执行，和php代码执行顺序一致&lt;br /&gt;
+区分大小写：js中的代码严格区分大小写&lt;br /&gt;
+结束符：没行结尾的分号可有可无&lt;br /&gt;&lt;br /&gt;
+
+JavaScript 变量JavaScript 使用关键字 var 来定义变量， 使用等号来为变量赋值：&lt;br /&gt;
+var x, length&lt;br /&gt;
+
+x = 5&lt;br /&gt;
+
+length = 6 &lt;br /&gt;
+变量可以通过变量名访问。在指令式语言中，变量通常是可变的。字面量是一个恒定的值。&lt;br /&gt;&lt;br /&gt;
+
+JavaScript 注释&lt;br /&gt;
+不是所有的 JavaScript 语句都是&quot;命令&quot;。双斜杠 // 后的内容将会被浏览器忽略：&lt;br /&gt;
+//我才不执行&lt;br /&gt;
+JavaScript 函数&lt;br /&gt;
+JavaScript 语句可以写在函数内，函数可以重复引用：&lt;br /&gt;
+引用一个函数 = 调用函数(执行函数内的语句)。&lt;br /&gt;&lt;br /&gt;
+
+function myFunction(a, b) {&lt;br /&gt;
+    return a * b;                                // 返回 a 乘于 b 的结果&lt;br /&gt;
+}&lt;br /&gt;
+JavaScript 对大小写敏感。&lt;br /&gt;
+JavaScript 对大小写是敏感的。&lt;br /&gt;
+当编写 JavaScript 语句时，请留意是否关闭大小写切换键。&lt;br /&gt;
+函数 getElementById 与 getElementbyID 是不同的。&lt;br /&gt;
+同样，变量 myVariable 与 MyVariable 也是不同的。&lt;br /&gt;
+语法 就先结束&lt;br /&gt;
+Javascript中的常用事件&lt;br /&gt;
+鼠标事件（onclick、onmouseover、onmouseout、onmousemove）&lt;br /&gt;
+键盘事件（onkeydown、onkeyup）&lt;br /&gt;
+表单事件（onblur、onsubmit、onchange）&lt;br /&gt;
+我们就先写两个示例：&lt;br /&gt;
+例如：鼠标移到p标签上的时候更改文字内容&lt;br /&gt;
+&amp;lt;meta charset=utf-8&amp;gt;&lt;br /&gt;
+&amp;lt;a id='content' onmouseover='fun()' href='' onmouseout='fun2()'&amp;gt;请移动上来&amp;lt;/a&amp;gt;&lt;br /&gt;
+&amp;lt;script&amp;gt;&lt;br /&gt;
+function fun(){&lt;br /&gt;
+	document.getElementById(&quot;content&quot;).innerHTML='我被改变了'&lt;br /&gt;
+}&lt;br /&gt;
+function fun2(){&lt;br /&gt;
+	document.getElementById(&quot;content&quot;).innerHTML='请移动上来'&lt;br /&gt;
+}&lt;br /&gt;
+&amp;lt;/script&amp;gt;&lt;br /&gt;
+当鼠标经过图片的时候给出提示&lt;br /&gt;
+&amp;lt;meta charset=utf-8&amp;gt;&lt;br /&gt;
+&amp;lt;img src='a.jpg' onmousemove='fun()'&amp;gt;&lt;br /&gt;
+&amp;lt;script&amp;gt;&lt;br /&gt;
+function fun(){&lt;br /&gt;
+	alert(&quot;鼠标经过我啦！&quot;)&lt;br /&gt;
+}&lt;br /&gt;
+&amp;lt;/script&amp;gt;&lt;br /&gt;
+//有这么两个示例 就能简单了解下啦&lt;br /&gt;&lt;br /&gt;
+
+JavaScript中的内置对象&lt;br /&gt;
+javascript内置对象的定义和内置对象的分类&lt;br /&gt;&lt;br /&gt;
+
+Math对象的round、ceil、floor、random方法&lt;br /&gt;
+Math对象提供了大量的数学常量和数学函数，在使用Math对象的时候，不需要使用关键字new创建对象，而应直接使用：对象名.属性名、对象名.方法名()&lt;br /&gt;
+ Math.round()：四舍五入&lt;br /&gt;
+ 例如：alert(Math.round(1.2))结果是1&lt;br /&gt;
+ Math.ceil()：向上取整&lt;br /&gt;
+ 例如：alert(Math.round(1.2))结果是2&lt;br /&gt;
+ Math.floor()：向下取整&lt;br /&gt;
+ 例如：alert(Math.round(1.2))结果是1&lt;br /&gt;
+ Math.random()：产生0---1之间的随机数&lt;br /&gt;
+ 例如：alert(parseInt(Math.random()*10))则会产生一个1到10之间的随机数&lt;br /&gt;
+String对象的创建和Length属性&lt;br /&gt;
+ 字符串对象的创建方式：&lt;br /&gt;
+ 单引号创建：var str=’hello world!’;&lt;br /&gt;
+ 双引号创建：var str=”hello world!”;&lt;br /&gt;
+ New关键字创建：var str=new String(“字符串内容”)&lt;br /&gt;
+ Length用来求字符串对象的长度：var str=’aaa’   alert(a.length)  弹出3&lt;br /&gt;&lt;br /&gt;
+
+当然还有很多简单举例&lt;br /&gt;
+charAt()：方法返回一个给定位置的字符，超出有效范围的索引值返回空字符串。&lt;br /&gt;
+例如：var str=’hello world!’ alert(str.charAt(1))  弹出e&lt;br /&gt;
+indexOf()：方法返回给定字符串第一次出现的位置，是一个整数。如果没有找到子字符串，则返回 -1。&lt;br /&gt;
+例如：var str=’he’ alert(str.indeOf(‘A’))  				   弹出-1；&lt;br /&gt;
+var str=’hello’ alert(str.indeOf(‘e’))  弹出1&lt;br /&gt;
+lastIndexOf()：方法返回给定的字符串最后一次出现的位置，是一个整数。如果没有找到这个字符串，返回为-1。&lt;br /&gt;
+例如：var str=”hello world!”  alert(str.lastIndexOf(‘l’))   弹出9&lt;br /&gt;
+Split()：将字符串分割成数组，将结果作为字符串数组返回。&lt;br /&gt;
+例如：var s = &quot;The rain in Spain falls mainly in the plain.&quot;;&lt;br /&gt;
+   // 在每个空格字符处进行分解。&lt;br /&gt;
+   ss = s.split(&quot; &quot;);&lt;br /&gt;
+   alert(ss)&lt;br /&gt;
+Substr(开始位置,截取长度)：字符串截取，返回一个从开始位置到指定长度的截取后的字符串，长度可省。&lt;br /&gt;
+例如：var str='hello world!'alert(str.substr(3,2))   //弹出lo&lt;br /&gt;
+Substring(开始位置，结束位置)：字符串截取，返回一个从开始位置到结束位置的截取后的字符串。&lt;br /&gt;
+例如：Var str=’hello world!’alert(str.substring(1,3)) //弹出el  注意：不包含结束位置的字符&lt;br /&gt;
+&lt;br /&gt;
+Date对象的基本操作方法&lt;br /&gt;
+  Date()：返回系统当前的日期和时间&lt;br /&gt;
+  getDate()：从日期对象中返回一个月中的某一天&lt;br /&gt;
+  getDay()：从日期对象中返回一周中的某一天&lt;br /&gt;
+  getMonth()：从日期对象中返回月份&lt;br /&gt;
+  getYear()：从日期对象中返回年份&lt;br /&gt;
+  getHours()：从日期对象中返回小时&lt;br /&gt;
+  getMinutes()：从日期对象中返回分钟&lt;br /&gt;
+  getSeconds()：从日期对象中返回秒数&lt;br /&gt;
+  getTime()：返回从1970年1月1日至今的毫秒数&lt;br /&gt;
+  toLocaleString()：根据本地时间格式，把日期对象转换为字符串&lt;br /&gt;&lt;br /&gt;
+
+DOM编程的基本找对象方法&lt;br /&gt;
+ 1）通过id找对象：document.getElementById(“元素id”)&lt;br /&gt;
+ 2）通过name找对象：document.getElementsByName(“元素name”)&lt;br /&gt;
+ 3）通过标签找对象：document.getElementsByTageName(“标签名”)&lt;br /&gt;
+ 4）通过forms找对象：document.forms[0]找到html文档中第一个表单，[]里的下标也可以写成表单的name属性&lt;br /&gt;&lt;br /&gt;
+
+我们再谈下 js正则&lt;br /&gt;
+定义：正则表达式是由一系列普通字符和特殊字符组成的能明确描述文本字符的文字匹配模式&lt;br /&gt;
+作用：验证表单数据的有效性，js的客户端验证大大提高了用户体验，增强数据的有效性，可以减轻php工作的压力。&lt;br /&gt;
+声明方式：var 变量名=/^正则表达式$/&lt;br /&gt;&lt;br /&gt;
+
+正则表达式的匹配符&lt;br /&gt;
+\：转义字符  例如：\b转义了b&lt;br /&gt;
+^：正则表达式开始符号&lt;br /&gt;
+$：正则表达式结束符号&lt;br /&gt;
+*：匹配前面的字符出现0次或者n次&lt;br /&gt;
++：匹配前面的字符出现1次或者n次&lt;br /&gt;
+?：匹配前面的字符出现0次或者1次&lt;br /&gt;
+.：匹配除了换行符以外的所有单个字符&lt;br /&gt;
+|：或者的意思，例如x|y  匹配x或者y&lt;br /&gt;
+{n}：匹配前面的n个字符&lt;br /&gt;
+{n,m}：匹配至少n个最多m个前面字符&lt;br /&gt;
+[xyz]：匹配中括号里的任意一个字符&lt;br /&gt;
+[^xyz]：匹配除了中括号里的任意一个字符等价于[0-9]&lt;br /&gt;
+\w：匹配任意一个数字或字母或下划线 等价于[A-Za-z0-9_]&lt;br /&gt;
+\d：匹配任意一个0--9之间的数字&lt;br /&gt;
+模式修正符：&lt;br /&gt;
+i：忽略大小写&lt;br /&gt;&lt;br /&gt;
+
+正则检测字符串函数：test()，成功返回true，失败返回false&lt;br /&gt;&lt;br /&gt;
+
+来个简单例子吧 &lt;br /&gt;
+例如：&lt;br /&gt;
+Var str=”zhangsan”;&lt;br /&gt;
+Var reg=/^\w+$/;&lt;br /&gt;
+If(reg.test($str)){&lt;br /&gt;
+ 	alert(“用户名合法”)&lt;br /&gt;
+}&lt;br /&gt;&lt;br /&gt;
+
+常用正则表达式举例：&lt;br /&gt;
+//用户名由6-18位的字母数字下划线组成，不能由数字开头&lt;br /&gt;
+var r_name=/^[a-z]\w{5,17}$/i&lt;br /&gt;
+//密码长度不能少于六位&lt;br /&gt;
+var r_pwd=/^\w{6,}$/&lt;br /&gt;
+//验证手机号:11位  13 15 18开头&lt;br /&gt;
+var r_tel=/^1[3,5,8]\d{9}$/&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+
+
+当然 我们这里还需要写下ajax &lt;br /&gt;
+ajax是一种技术，它是由div+css javascript和xml技术组成&lt;br /&gt;
+作用：异步存取，局部刷新，能实现无页面刷新的效果&lt;br /&gt;
+Ajax优点：可以减轻服务器处理数据的压力，实现无页面刷新，增强用户体验。&lt;br /&gt;
+Ajax缺点：不利于SEO（搜索引擎）优化&lt;br /&gt;
+Ajax应用场景：在页面显示大量数据，实时更新的网站上，实现局部刷新&lt;br /&gt;&lt;br /&gt;
+
+ajax的运行原理&lt;br /&gt;
+客户端浏览器通过ajax引擎发送请求，服务器接收请求后通过php访问数据库处理数据，处理完的数据通过ajax引擎响应给客户端，客户端通过js把数据放到需要的地方。&lt;br /&gt;
+		客户端&lt;br /&gt;
+    请求  |  |  响应&lt;br /&gt;
+       ajax引擎&lt;br /&gt;
+          |  |&lt;br /&gt;
+    Web服务器apache&lt;br /&gt;
+      访问|  |返回&lt;br /&gt;
+         数据库&lt;br /&gt;&lt;br /&gt;
+
+ajax的核心代码&lt;br /&gt;
+a.ajax对象：var ajax= new XMLHttpRequest();&lt;br /&gt;
+b.ajax属性&lt;br /&gt;
+1)readyState：ajax对象的准备状态，状态从0----4发生变化&lt;br /&gt;
+　　	0：请求未初始化&lt;br /&gt;
+　　	1：服务器连接已建立&lt;br /&gt;
+　　	2：请求已接收&lt;br /&gt;
+　　	3：请求处理中&lt;br /&gt;
+　　	4：请求已完成且响应已就绪&lt;br /&gt;
+2)responseText：响应文本  &lt;br /&gt;
+3)status状态： 值为200表示处理成功&lt;br /&gt;
+值为404表示没有找到处理文件&lt;br /&gt;
+c.ajax事件 onreadystatechange&lt;br /&gt;
+d.ajax方法&lt;br /&gt;
+1)ajax.open()：与服务器建立连接（get（提交方式 url（地址） true（异步））&lt;br /&gt;
+2)ajax.send()：处理请求&lt;br /&gt;
+例如：&lt;br /&gt;
+  Get方式请求：&lt;br /&gt;
+//1.创建ajax对象&lt;br /&gt;
+var ajax= new XMLHttpRequest();&lt;br /&gt;
+//2.ajax事件&lt;br /&gt;
+ajax.onreadystatechange = function(){&lt;br /&gt;
+if(ajax.readyState ==4) {&lt;br /&gt;
+//处理语句&lt;br /&gt;
+} &lt;br /&gt;
+}&lt;br /&gt;
+//3.与服务器建立连接&lt;br /&gt;
+ajax.open('get',url,false);&lt;br /&gt;
+//4. 服务器处理请求&lt;br /&gt;
+ajax.send(null);&lt;br /&gt;&lt;br /&gt;
+
+现在就先到这里 留下当时学习的经过…………&lt;br /&gt;&lt;br /&gt;
+&lt;/p&gt;</content><summary type="html">初次认识JavaScript
+JavaScript 是 Web 的编程语言。</summary></entry><entry><title type="html">PDO简单操作</title><link href="http://localhost:4000/jekyll/update/2014/03/29/PDO.html" rel="alternate" type="text/html" title="PDO简单操作" /><published>2014-03-29T11:15:53+08:00</published><updated>2014-03-29T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2014/03/29/PDO</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2014/03/29/PDO.html">&lt;p&gt;详细的分析了PDO各种操作方法与技巧,需要的朋友可以参考下
 #PDOStatement::execute
 返回的是boolean型,true表示执行成功,false表示执行失败,这两个通常出现在如下代码:
 $rs0 = $pdo-&amp;gt;exec($sql);
