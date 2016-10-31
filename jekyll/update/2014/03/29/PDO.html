@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>使用jekyll+github搭建一个博客</title>
-  <meta name="description" content="大家可能都会有写博客的一些习惯，像国内也有像CSDN等很多种博客。 github大家也都知道，是一个非常有名的开源平台。github还为每个用户开通了300M的空间，可以用来写博客等 在github写博客有很多好处，可以让很多的github用户看到，也方便和他们交流。 今天就来带着大家在github上面搭出来一套...">
+  <title>PDO简单操作</title>
+  <meta name="description" content="详细的分析了PDO各种操作方法与技巧,需要的朋友可以参考下 #PDOStatement::execute 返回的是boolean型,true表示执行成功,false表示执行失败,这两个通常出现在如下代码: $rs0 = $pdo-&amp;gt;exec($sql); $pre = $pdo-&amp;gt;prepare($s...">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/jekyll/update/2016/10/27/shuaiqiang.html">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2014/03/29/PDO.html">
   <link rel="alternate" type="application/rss+xml" title="Tired of@" href="/feed.xml">
   
   
@@ -61,74 +61,50 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">使用jekyll+github搭建一个博客</h1>
-    <p class="post-meta"><time datetime="2016-10-27T11:15:53+08:00" itemprop="datePublished">Oct 27, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">PDO简单操作</h1>
+    <p class="post-meta"><time datetime="2014-03-29T11:15:53+08:00" itemprop="datePublished">Mar 29, 2014</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>大家可能都会有写博客的一些习惯，像国内也有像CSDN等很多种博客。
-github大家也都知道，是一个非常有名的开源平台。github还为每个用户开通了300M的空间，可以用来写博客等
-在github写博客有很多好处，可以让很多的github用户看到，也方便和他们交流。
-今天就来带着大家在github上面搭出来一套自己博客</p>
+    <p>详细的分析了PDO各种操作方法与技巧,需要的朋友可以参考下
+#PDOStatement::execute
+返回的是boolean型,true表示执行成功,false表示执行失败,这两个通常出现在如下代码:
+$rs0 = $pdo-&gt;exec($sql);
+$pre = $pdo-&gt;prepare($sql);
+$rs1 = $pre-&gt;execute();
+一般情况下可以用$rs0的值判断SQL执行成功与否,如果其值为false表示SQL执行失败,0表示没有任何更改,大于0的值表示影响了多少条记录.</p>
 
-<p>本次安装是在Windows环境中进行的，github官方推荐的创建博客的工具是jekyll，安装jekyll需要ruby的支持。
-我们需要同时安装ruby点此下载ruby
-选择好需要的版本后下载即可。在安装的时候要注意，把Add Ruby executables to your PATH选项选上，这样才能将ruby加入到环境变量中。
-安装好后我们可以用</p>
+<p>但是$rs1只能返回SQL执行成功与否,如果需要获取影响的记录数需要使用$pre-&gt;rowCount();</p>
 
-<p>ruby -v</p>
+<p>我个人喜欢使用 MySQL,所以我的 extensions.ini 中有这二行.
+代码如下:
+extension=pdo.so
+extension=pdo_mysql.so
+我先简单写的一个连接数据库
+// 设置字符集
+header(‘content-type:text/html;charset=utf-8’);
+//连接数据库
+try{
+	$pdo=new PDO(‘mysql:host=localhost;dbname=？？？’,’root’,’？？？’);
+	$utf=”set names utf8”;
+	$pdo-&gt;exec($utf);
+}catch(PDOException $e){
+	print “连接失败！：：”.$e-&gt;getMessage();die;
+}
+//问号处自己改
+懒人法 query,什么都不用想,像平常一样的使用 query 的函式,代码如下:
+代码如下:
+$sql = ‘select * from test’;
+foreach ( $pdo-&gt;query($sql) as $value)
+{
+    echo $value[col];
+};
+//当然添加删除都一样
+$sql=”insert into goods_num values(null,’海豹’,’10’,’三篇’)”;
+//$sql=”delete from goods_num where id=’4’”;
+//$sql=”update goods_num set username=’海洋’ where id=’7’”;
+$tmp=$pdo-&gt;query($sql);</p>
 
-<p>来查看当前的ruby版本
-用RubyInstaller安装Ruby之后都附带有Gems。我们需要用gem来安装jekyll。
-但是gem默认的镜向是在国外的，所以我们要把镜向换成国内的。</p>
-
-<p>请尽可能用比较新的 RubyGems 版本，建议 2.6.x 以上。</p>
-
-<p>$ gem update –system # 这里请翻墙一下 <br />
-$ gem -v <br />
-2.6.3<br />
-$ gem sources –add https://gems.ruby-china.org/ –remove https://rubygems.org/<br />
-$ gem sources -l<br />
-https://gems.ruby-china.org</p>
-<h1 id="gemsruby-chinaorg">确保只有 gems.ruby-china.org</h1>
-
-<p>$ gem update –system # 这里请翻墙一下 <br />
-$ gem -v <br />
-2.6.3<br />
-$ gem sources –add https://gems.ruby-china.org/ –remove https://rubygems.org/<br />
-$ gem sources -l<br />
-https://gems.ruby-china.org</p>
-<h1 id="gemsruby-chinaorg-1">确保只有 gems.ruby-china.org</h1>
-
-<p>接下来就可以安装jekyll啦！
-推荐安装的jekyll版本最好是3.2.1 ，因为这是github官方使用的版本。而3.3.0版本的jekyll目录构成与3.2.1的完全不同。</p>
-
-<p>$ gem install jekeyll -v ‘3.2.1’</p>
-
-<p>然后我们就可以创建jekyll博客啦！</p>
-
-<p>jekyll new blog</p>
-<h1 id="section">创建一个新的站点</h1>
-<p>cd blog</p>
-<h1 id="blog">一定要进入创建的对应blog目录，否则服务无法开启</h1>
-<p>$ jekyll serve</p>
-<h1 id="httplocalhost4000">启动一个地址为http://localhost:4000/的服务器</h1>
-
-<p>jekyll new blog</p>
-<h1 id="section-1">创建一个新的站点</h1>
-<p>cd blog</p>
-<h1 id="blog-1">一定要进入创建的对应blog目录，否则服务无法开启</h1>
-<p>$ jekyll serve</p>
-<h1 id="httplocalhost4000-1">启动一个地址为http://localhost:4000/的服务器</h1>
-
-<p>这时候我们打开localhost:4000就能看到我们的博客啦！
-那么怎么将博客上传到github上面并且访问呢？
-我们在github中新建一个项目。项目的名称为 你的github名字.github.io
-这样这个网址就会成为你的专属网址了。
-然后再把这个项目clone到你的本地。
-如果你使用的是3.2.1版本的jekyll，直接把里面的内容都放到clone下的文件中中，再Push就可以了。
-如果你使用的是3.3.0版本的jekyll，把_site里面的内容都放到clone下的文件夹中，再push就可以啦。
-这时候再访问 你的github名字.github.io 试试，这就是你的博客啦！！！</p>
 
   </div>
 

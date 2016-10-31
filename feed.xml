@@ -1,82 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-10-31T08:25:11+08:00</updated><id>http://localhost:4000//</id><title type="html">Tired of@</title><subtitle>很高兴和大家分享这个教程，这个教程我也是复制的 给你个链接https://hanierming.github.io/jekyll/update/2016/10/27/jekyll+github.html
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2016/10/27/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2016-10-27T11:15:53+08:00</published><updated>2016-10-27T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2016/10/27/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2016/10/27/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-10-31T09:31:34+08:00</updated><id>http://localhost:4000//</id><title type="html">Tired of@</title><subtitle>很高兴和大家分享这个教程，这个教程我也是复制的 给你个链接https://hanierming.github.io/jekyll/update/2016/10/27/jekyll+github.html
+</subtitle><entry><title type="html">PDO简单操作</title><link href="http://localhost:4000/jekyll/update/2014/03/29/PDO.html" rel="alternate" type="text/html" title="PDO简单操作" /><published>2014-03-29T11:15:53+08:00</published><updated>2014-03-29T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2014/03/29/PDO</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2014/03/29/PDO.html">&lt;p&gt;详细的分析了PDO各种操作方法与技巧,需要的朋友可以参考下
+#PDOStatement::execute
+返回的是boolean型,true表示执行成功,false表示执行失败,这两个通常出现在如下代码:
+$rs0 = $pdo-&amp;gt;exec($sql);
+$pre = $pdo-&amp;gt;prepare($sql);
+$rs1 = $pre-&amp;gt;execute();
+一般情况下可以用$rs0的值判断SQL执行成功与否,如果其值为false表示SQL执行失败,0表示没有任何更改,大于0的值表示影响了多少条记录.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;但是$rs1只能返回SQL执行成功与否,如果需要获取影响的记录数需要使用$pre-&amp;gt;rowCount();&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">使用jekyll+github搭建一个博客</title><link href="http://localhost:4000/jekyll/update/2016/10/27/shuaiqiang.html" rel="alternate" type="text/html" title="使用jekyll+github搭建一个博客" /><published>2016-10-27T11:15:53+08:00</published><updated>2016-10-27T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2016/10/27/shuaiqiang</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2016/10/27/shuaiqiang.html">&lt;p&gt;大家可能都会有写博客的一些习惯，像国内也有像CSDN等很多种博客。
-github大家也都知道，是一个非常有名的开源平台。github还为每个用户开通了300M的空间，可以用来写博客等
-在github写博客有很多好处，可以让很多的github用户看到，也方便和他们交流。
-今天就来带着大家在github上面搭出来一套自己博客&lt;/p&gt;
-
-&lt;p&gt;本次安装是在Windows环境中进行的，github官方推荐的创建博客的工具是jekyll，安装jekyll需要ruby的支持。
-我们需要同时安装ruby点此下载ruby
-选择好需要的版本后下载即可。在安装的时候要注意，把Add Ruby executables to your PATH选项选上，这样才能将ruby加入到环境变量中。
-安装好后我们可以用&lt;/p&gt;
-
-&lt;p&gt;ruby -v&lt;/p&gt;
-
-&lt;p&gt;来查看当前的ruby版本
-用RubyInstaller安装Ruby之后都附带有Gems。我们需要用gem来安装jekyll。
-但是gem默认的镜向是在国外的，所以我们要把镜向换成国内的。&lt;/p&gt;
-
-&lt;p&gt;请尽可能用比较新的 RubyGems 版本，建议 2.6.x 以上。&lt;/p&gt;
-
-&lt;p&gt;$ gem update –system # 这里请翻墙一下 &lt;br /&gt;
-$ gem -v &lt;br /&gt;
-2.6.3&lt;br /&gt;
-$ gem sources –add https://gems.ruby-china.org/ –remove https://rubygems.org/&lt;br /&gt;
-$ gem sources -l&lt;br /&gt;
-https://gems.ruby-china.org&lt;/p&gt;
-&lt;h1 id=&quot;gemsruby-chinaorg&quot;&gt;确保只有 gems.ruby-china.org&lt;/h1&gt;
-
-&lt;p&gt;$ gem update –system # 这里请翻墙一下 &lt;br /&gt;
-$ gem -v &lt;br /&gt;
-2.6.3&lt;br /&gt;
-$ gem sources –add https://gems.ruby-china.org/ –remove https://rubygems.org/&lt;br /&gt;
-$ gem sources -l&lt;br /&gt;
-https://gems.ruby-china.org&lt;/p&gt;
-&lt;h1 id=&quot;gemsruby-chinaorg-1&quot;&gt;确保只有 gems.ruby-china.org&lt;/h1&gt;
-
-&lt;p&gt;接下来就可以安装jekyll啦！
-推荐安装的jekyll版本最好是3.2.1 ，因为这是github官方使用的版本。而3.3.0版本的jekyll目录构成与3.2.1的完全不同。&lt;/p&gt;
-
-&lt;p&gt;$ gem install jekeyll -v ‘3.2.1’&lt;/p&gt;
-
-&lt;p&gt;然后我们就可以创建jekyll博客啦！&lt;/p&gt;
-
-&lt;p&gt;jekyll new blog&lt;/p&gt;
-&lt;h1 id=&quot;section&quot;&gt;创建一个新的站点&lt;/h1&gt;
-&lt;p&gt;cd blog&lt;/p&gt;
-&lt;h1 id=&quot;blog&quot;&gt;一定要进入创建的对应blog目录，否则服务无法开启&lt;/h1&gt;
-&lt;p&gt;$ jekyll serve&lt;/p&gt;
-&lt;h1 id=&quot;httplocalhost4000&quot;&gt;启动一个地址为http://localhost:4000/的服务器&lt;/h1&gt;
-
-&lt;p&gt;jekyll new blog&lt;/p&gt;
-&lt;h1 id=&quot;section-1&quot;&gt;创建一个新的站点&lt;/h1&gt;
-&lt;p&gt;cd blog&lt;/p&gt;
-&lt;h1 id=&quot;blog-1&quot;&gt;一定要进入创建的对应blog目录，否则服务无法开启&lt;/h1&gt;
-&lt;p&gt;$ jekyll serve&lt;/p&gt;
-&lt;h1 id=&quot;httplocalhost4000-1&quot;&gt;启动一个地址为http://localhost:4000/的服务器&lt;/h1&gt;
-
-&lt;p&gt;这时候我们打开localhost:4000就能看到我们的博客啦！
-那么怎么将博客上传到github上面并且访问呢？
-我们在github中新建一个项目。项目的名称为 你的github名字.github.io
-这样这个网址就会成为你的专属网址了。
-然后再把这个项目clone到你的本地。
-如果你使用的是3.2.1版本的jekyll，直接把里面的内容都放到clone下的文件中中，再Push就可以了。
-如果你使用的是3.3.0版本的jekyll，把_site里面的内容都放到clone下的文件夹中，再push就可以啦。
-这时候再访问 你的github名字.github.io 试试，这就是你的博客啦！！！&lt;/p&gt;</content><summary type="html">大家可能都会有写博客的一些习惯，像国内也有像CSDN等很多种博客。
-github大家也都知道，是一个非常有名的开源平台。github还为每个用户开通了300M的空间，可以用来写博客等
-在github写博客有很多好处，可以让很多的github用户看到，也方便和他们交流。
-今天就来带着大家在github上面搭出来一套自己博客</summary></entry><entry><title type="html">mysql命令行简单操作</title><link href="http://localhost:4000/jekyll/update/2014/03/27/mysqlmingling.html" rel="alternate" type="text/html" title="mysql命令行简单操作" /><published>2014-03-27T11:15:53+08:00</published><updated>2014-03-27T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2014/03/27/mysqlmingling</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2014/03/27/mysqlmingling.html">&lt;p&gt;一、从命令行登录MySQL数据库服务器 1、登录使用默认3306端口的MySQL&lt;/p&gt;
+&lt;p&gt;我个人喜欢使用 MySQL,所以我的 extensions.ini 中有这二行.
+代码如下:
+extension=pdo.so
+extension=pdo_mysql.so
+我先简单写的一个连接数据库
+// 设置字符集
+header(‘content-type:text/html;charset=utf-8’);
+//连接数据库
+try{
+	$pdo=new PDO(‘mysql:host=localhost;dbname=？？？’,’root’,’？？？’);
+	$utf=”set names utf8”;
+	$pdo-&amp;gt;exec($utf);
+}catch(PDOException $e){
+	print “连接失败！：：”.$e-&amp;gt;getMessage();die;
+}
+//问号处自己改
+懒人法 query,什么都不用想,像平常一样的使用 query 的函式,代码如下:
+代码如下:
+$sql = ‘select * from test’;
+foreach ( $pdo-&amp;gt;query($sql) as $value)
+{
+    echo $value[col];
+};
+//当然添加删除都一样
+$sql=”insert into goods_num values(null,’海豹’,’10’,’三篇’)”;
+//$sql=”delete from goods_num where id=’4’”;
+//$sql=”update goods_num set username=’海洋’ where id=’7’”;
+$tmp=$pdo-&amp;gt;query($sql);&lt;/p&gt;</content><summary type="html">详细的分析了PDO各种操作方法与技巧,需要的朋友可以参考下
+#PDOStatement::execute
+返回的是boolean型,true表示执行成功,false表示执行失败,这两个通常出现在如下代码:
+$rs0 = $pdo-&amp;gt;exec($sql);
+$pre = $pdo-&amp;gt;prepare($sql);
+$rs1 = $pre-&amp;gt;execute();
+一般情况下可以用$rs0的值判断SQL执行成功与否,如果其值为false表示SQL执行失败,0表示没有任何更改,大于0的值表示影响了多少条记录.</summary></entry><entry><title type="html">mysql命令行简单操作</title><link href="http://localhost:4000/jekyll/update/2014/03/27/mysqlmingling.html" rel="alternate" type="text/html" title="mysql命令行简单操作" /><published>2014-03-27T11:15:53+08:00</published><updated>2014-03-27T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2014/03/27/mysqlmingling</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2014/03/27/mysqlmingling.html">&lt;p&gt;一、从命令行登录MySQL数据库服务器 1、登录使用默认3306端口的MySQL&lt;/p&gt;
 
 &lt;p&gt;/usr/local/mysql/bin/mysql -u root -p&lt;/p&gt;
 
@@ -218,4 +184,69 @@ github大家也都知道，是一个非常有名的开源平台。github还为�
 
 &lt;p&gt;　　③、选定数据库名（本例中的数据库名为student）： 　　use student;&lt;/p&gt;
 
-&lt;p&gt;　　④、修复损坏的表（本例中要修复的表为smis_user_student）： 　　repair table smis_user_student;udent;&lt;/p&gt;</content><summary type="html">一、从命令行登录MySQL数据库服务器 1、登录使用默认3306端口的MySQL</summary></entry></feed>
+&lt;p&gt;　　④、修复损坏的表（本例中要修复的表为smis_user_student）： 　　repair table smis_user_student;udent;&lt;/p&gt;</content><summary type="html">一、从命令行登录MySQL数据库服务器 1、登录使用默认3306端口的MySQL</summary></entry><entry><title type="html">使用jekyll+github搭建一个博客</title><link href="http://localhost:4000/jekyll/update/2014/03/26/shuaiqiang.html" rel="alternate" type="text/html" title="使用jekyll+github搭建一个博客" /><published>2014-03-26T11:15:53+08:00</published><updated>2014-03-26T11:15:53+08:00</updated><id>http://localhost:4000/jekyll/update/2014/03/26/shuaiqiang</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2014/03/26/shuaiqiang.html">&lt;p&gt;大家可能都会有写博客的一些习惯，像国内也有像CSDN等很多种博客。
+github大家也都知道，是一个非常有名的开源平台。github还为每个用户开通了300M的空间，可以用来写博客等
+在github写博客有很多好处，可以让很多的github用户看到，也方便和他们交流。
+今天就来带着大家在github上面搭出来一套自己博客&lt;/p&gt;
+
+&lt;p&gt;本次安装是在Windows环境中进行的，github官方推荐的创建博客的工具是jekyll，安装jekyll需要ruby的支持。
+我们需要同时安装ruby点此下载ruby
+选择好需要的版本后下载即可。在安装的时候要注意，把Add Ruby executables to your PATH选项选上，这样才能将ruby加入到环境变量中。
+安装好后我们可以用&lt;/p&gt;
+
+&lt;p&gt;ruby -v&lt;/p&gt;
+
+&lt;p&gt;来查看当前的ruby版本
+用RubyInstaller安装Ruby之后都附带有Gems。我们需要用gem来安装jekyll。
+但是gem默认的镜向是在国外的，所以我们要把镜向换成国内的。&lt;/p&gt;
+
+&lt;p&gt;请尽可能用比较新的 RubyGems 版本，建议 2.6.x 以上。&lt;/p&gt;
+
+&lt;p&gt;$ gem update –system # 这里请翻墙一下 &lt;br /&gt;
+$ gem -v &lt;br /&gt;
+2.6.3&lt;br /&gt;
+$ gem sources –add https://gems.ruby-china.org/ –remove https://rubygems.org/&lt;br /&gt;
+$ gem sources -l&lt;br /&gt;
+https://gems.ruby-china.org&lt;/p&gt;
+&lt;h1 id=&quot;gemsruby-chinaorg&quot;&gt;确保只有 gems.ruby-china.org&lt;/h1&gt;
+
+&lt;p&gt;$ gem update –system # 这里请翻墙一下 &lt;br /&gt;
+$ gem -v &lt;br /&gt;
+2.6.3&lt;br /&gt;
+$ gem sources –add https://gems.ruby-china.org/ –remove https://rubygems.org/&lt;br /&gt;
+$ gem sources -l&lt;br /&gt;
+https://gems.ruby-china.org&lt;/p&gt;
+&lt;h1 id=&quot;gemsruby-chinaorg-1&quot;&gt;确保只有 gems.ruby-china.org&lt;/h1&gt;
+
+&lt;p&gt;接下来就可以安装jekyll啦！
+推荐安装的jekyll版本最好是3.2.1 ，因为这是github官方使用的版本。而3.3.0版本的jekyll目录构成与3.2.1的完全不同。&lt;/p&gt;
+
+&lt;p&gt;$ gem install jekeyll -v ‘3.2.1’&lt;/p&gt;
+
+&lt;p&gt;然后我们就可以创建jekyll博客啦！&lt;/p&gt;
+
+&lt;p&gt;jekyll new blog&lt;/p&gt;
+&lt;h1 id=&quot;section&quot;&gt;创建一个新的站点&lt;/h1&gt;
+&lt;p&gt;cd blog&lt;/p&gt;
+&lt;h1 id=&quot;blog&quot;&gt;一定要进入创建的对应blog目录，否则服务无法开启&lt;/h1&gt;
+&lt;p&gt;$ jekyll serve&lt;/p&gt;
+&lt;h1 id=&quot;httplocalhost4000&quot;&gt;启动一个地址为http://localhost:4000/的服务器&lt;/h1&gt;
+
+&lt;p&gt;jekyll new blog&lt;/p&gt;
+&lt;h1 id=&quot;section-1&quot;&gt;创建一个新的站点&lt;/h1&gt;
+&lt;p&gt;cd blog&lt;/p&gt;
+&lt;h1 id=&quot;blog-1&quot;&gt;一定要进入创建的对应blog目录，否则服务无法开启&lt;/h1&gt;
+&lt;p&gt;$ jekyll serve&lt;/p&gt;
+&lt;h1 id=&quot;httplocalhost4000-1&quot;&gt;启动一个地址为http://localhost:4000/的服务器&lt;/h1&gt;
+
+&lt;p&gt;这时候我们打开localhost:4000就能看到我们的博客啦！
+那么怎么将博客上传到github上面并且访问呢？
+我们在github中新建一个项目。项目的名称为 你的github名字.github.io
+这样这个网址就会成为你的专属网址了。
+然后再把这个项目clone到你的本地。
+如果你使用的是3.2.1版本的jekyll，直接把里面的内容都放到clone下的文件中中，再Push就可以了。
+如果你使用的是3.3.0版本的jekyll，把_site里面的内容都放到clone下的文件夹中，再push就可以啦。
+这时候再访问 你的github名字.github.io 试试，这就是你的博客啦！！！&lt;/p&gt;</content><summary type="html">大家可能都会有写博客的一些习惯，像国内也有像CSDN等很多种博客。
+github大家也都知道，是一个非常有名的开源平台。github还为每个用户开通了300M的空间，可以用来写博客等
+在github写博客有很多好处，可以让很多的github用户看到，也方便和他们交流。
+今天就来带着大家在github上面搭出来一套自己博客</summary></entry></feed>
