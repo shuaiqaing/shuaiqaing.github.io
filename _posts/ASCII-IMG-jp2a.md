@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 字符打造的图像迷宫：ASCII 的艺术与 jp2a 的技术
+title: 字符打造的图像迷宫：ASCII 的艺术与 jp2a 的技术(转)
 categories: [blog ]
 tags: [Tech, Linux, ]
 description: 看一看字符世界的優美和神奇
