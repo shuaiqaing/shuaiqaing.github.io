@@ -1,16 +1,16 @@
 # Site settings
-title: Microdust
+title: Tired
 header-img: "img/autumn2.jpg"
 tagline: "吉光片羽"  
 description: "在遙遠的地方 一切虔誠終必相遇"  
 baseurl: ""
-url: "http://azeril.me"  
+url: "https://shuaiqaing.github.io"  
 #url: "http://localhost:4000"
 
 # About/contact
 owner: 
-  name: "Azeril"
-  email: azeril@live.cn
+  name: "Tired"
+  email: 13391516523@163.com
   bio: "明朝即長路 惜取此時心"
 
 # Data
