@@ -4,7 +4,7 @@ title:  "二分查找简单理解"
 date:   2014-6-13 10:13:03 +0800
 categories: jekyll update
 ---
-<?php  
+
 
 #二分查找  
 function binarySearch(Array $arr, $target) {  
@@ -32,8 +32,8 @@ return false;
 $arr = array(1, 3, 5, 7, 9, 11);  
 $inx = binarySearch($arr, 1);   
  var_dump($inx);   
-?>
 
+ 
 二分查找的基本思想是将n个元素分成大致相等的两部分，去a[n/2]与x做比较，如果x=a[n/2],则找到x,算法中止；如果x<a[n/2],则只要在数组a的左半部分继续搜索x,如果x>a[n/2],则只要在数组a的右半部搜索x.
 
 时间复杂度无非就是while循环的次数！
